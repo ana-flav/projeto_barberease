@@ -22,12 +22,12 @@ Recomendamos criar um ambiente virtual para isolar as dependências do projeto. 
 
    ```bash
    python -m venv venv
-   
+   ```
 3. Ative o ambiente virtual (dependendo do seu sistema operacional):
    no windowns:
    ```bash
    venv\Scripts\activate
-
+   ```
   No macOS e Linux:
    ```bash
     source venv/bin/activate
@@ -35,7 +35,7 @@ Recomendamos criar um ambiente virtual para isolar as dependências do projeto. 
 4. Instale as depedências do projeto
    ```bash
      pip install -r requirements.txt
-  ´´´
+  ```
   
 
 
