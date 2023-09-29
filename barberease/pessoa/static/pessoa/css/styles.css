@@ -136,6 +136,11 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+	transition: 200ms;
+}
+
+.bottomgg:hover{
+    background-color: #cfe0fa; 
 }
 
 .bottoment:hover{
@@ -176,3 +181,8 @@ body {
         width: 70%;
     }
 }
+.google-login-button {
+    text-decoration: none; 
+    color: #402009;
+}
+

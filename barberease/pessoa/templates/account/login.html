@@ -1,0 +1,67 @@
+{% load static %}
+{% load widget_tweaks %}
+{% load i18n %}
+{% load account socialaccount %}
+{% get_providers as socialaccount_providers %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'pessoa/css/styles.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+	
+
+
+{% get_providers as socialaccount_providers %}
+
+<
+
+			<form method="POST">
+				<div class="centro">
+					{% csrf_token %}
+
+					<div class="barb">BarberEase</div>
+					<p class="find">Encontre o melhor salão para você!</p>
+					<p class="box-title">Faça seu login:</p>
+
+					<div class="form-input-container">
+						<div class="field-container">
+							<label class="label">E-mail:
+								<div class="form-control-container">
+									<input type="text" name="login" class="form-control" id="id_login" placeholder="E-mail">
+								</div>
+							</label>
+						</div>
+
+						<div class="field-container">
+							<label class="label">Senha:
+								<div class="form-control-container">
+								{% render_field form.password class="form-control" %}
+								</div>
+							</label>
+						</div>
+					</div>
+
+
+					<br>
+					{% get_providers as socialaccount_providers %}
+					<div class="form-button-container">
+						<div class="bottomgg" id="googleButton">
+							<a href="{% provider_login_url 'google' %}" class="google-login-button">
+								Fazer login com o Google
+							</a>
+						</div>
+
+						<input class="bottoment" type="submit" value="Entrar"/>
+					</div>
+				</div>   
+			</form>
+	</div>
+
+</body>
+</html>
