@@ -137,6 +137,12 @@ body {
     font-weight: 400;
     line-height: normal;
 }
+
+.bottoment:hover{
+	background-color: #8f5429;
+	border: 3px solid #8f5429;
+}
+
 .bottoment{
     width: 310px;
     height: 32px;
@@ -156,6 +162,7 @@ body {
     font-weight: 800;
 	color: white;
     line-height: normal;
+	transition: 200ms;
 }
 
 .form-button-container{
