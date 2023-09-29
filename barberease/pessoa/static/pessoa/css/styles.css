@@ -2,7 +2,7 @@
 @import url('https://fonts.google.com/specimen/Kanit?query=kanit');
 
 body {
-    background-image: url(../imagens/login_back.png);
+    background-image: url(../images/login_back.png);
     background-position: center center;
     background-size: cover;
     text-align: center;
@@ -14,15 +14,23 @@ body {
     height: 100%;
 }
 
+.container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .centro{
-    position: absolute;
-    padding: 20px;
-    width: 310px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    padding: 30px;
+    max-width: 310px;
     height: 395px;
-    margin: 0 auto;
     border-radius: 10px;
     background: #FFF9EE;  
-    text-align: center;
 }
 
 .centro .barb{
@@ -42,7 +50,8 @@ body {
     font-weight: 900;
     margin-top: 5px;
 }
-.centro .find{
+
+.find{
     color: #7E5638;
     text-align: center;
     font-family: Kanit;
@@ -50,64 +59,70 @@ body {
     font-style: normal;
     font-weight: 400;
 }
-.centro .do{
+
+.box-title{
     color: #000;
     text-align: center;
     font-family: Kanit;
-    font-size: 14px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
-.centro .bot{
-    width: 270px;
-    height: 45px;
-    background-color: #DDCEC2;
-    margin-left: 20px;
-    border-radius: 18px;
+.field-container{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.form-input-container{
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.form-control-container{
+	display: flex;
+	align-items: center;
+    max-width: 300px;
+    height: 30px;
+	padding-left: 10px;
+	margin-top: 5px;
+    background-color: white;
+	border: 1px solid #DDCEC2;
+    border-radius: 15px;
     cursor: pointer;
-    margin-bottom: 15px;
 }
-.custom-bot {
-    width: 247px;
-    height: 43px;
-    background-color: transparent;
-    border: transparent;
-    border-radius: 18px;
-    margin-bottom: 15px;
-    text-align: left;
-    padding-left: 20px;
+
+.form-control{
+    background-color: white;
+	border: none;
 }
-.centro .email{
+
+.form-control:focus{
+	outline:none;
+}
+
+.label{
     color: #000;
     text-align: left;
     font-family: Kanit;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
-    margin-top: 20px;
-    margin-left: 23px;
 }
-.centro .senha{
-    color: #000;
-    text-align: left;
-    font-family: Kanit;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    margin-left: 23px;
-}
-.centro .bottomgg{
-    background-image: url(../imagens/google_sigla.png);
+
+
+.bottomgg{
+    background-image: url(../images/google_sigla.png);
     background-size: 20px 20px;
     background-position: 12px center;
     background-repeat: no-repeat;
-    width: 220px;
+    width: 310px;
     height: 30px;
     background-color: #FFF9EE;
     border: 1px solid #7E5638;
-    margin-left: 45px;
     border-radius: 15px;
     cursor: pointer;
     margin-bottom: 20px;
@@ -122,12 +137,11 @@ body {
     font-weight: 400;
     line-height: normal;
 }
-.centro .bottoment{
-    width: 100px;
-    height: 30px;
-    background-color: #FFF9EE;
+.bottoment{
+    width: 310px;
+    height: 32px;
+    background-color: #402009;
     border: 3px solid #402009;
-    margin-left: 103px;
     border-radius: 15px;
     cursor: pointer;
     margin-bottom: 8px;
@@ -139,8 +153,16 @@ body {
     font-family: Kanit;
     font-size: 14px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 800;
+	color: white;
     line-height: normal;
+}
+
+.form-button-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
 }
 @media (max-width: 480px) {
     button {

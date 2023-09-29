@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Meus apps
     "pessoa",
+    "widget_tweaks",
 
 ]
 
