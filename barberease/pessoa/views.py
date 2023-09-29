@@ -1,26 +1,38 @@
-from django.contrib.auth.views import LoginView
-from django.forms.models import BaseModelForm
-from django.http import HttpResponse
+
 from django.urls import reverse_lazy
-from django.views.generic.edit import CreateView
 from .models import Cliente
-from .forms import ClienteForm  
+from .forms import ClienteForm
+from allauth.account.views import SignupView, LoginView, TemplateView, LogoutView
+from allauth.socialaccount.views import SignupView
+
+
+
 
 class UsuarioLoginView(LoginView):
     # Views para renderizar a tela inicial Usuario
 
     template_name = "login.html"
-    success_url = reverse_lazy("pessoa:cadastro")
+    success_url = reverse_lazy("pessoa:home")
 
-class ClienteCadastrarView(CreateView):
+
+class ClienteCadastrarView(SignupView):
     # Views para renderizar a tela de cadastro de Cliente
 
     form_class = ClienteForm  
-    template_name = "cliente_cadastro.html"
+    template_name = "account/signup.html"
     model = Cliente
+    success_url = reverse_lazy("pessoa:home")
+
+
+class ClienteHomeView(TemplateView):
+    # Views para renderizar a tela inicial Cliente
+
+    template_name = "cliente_home.html"
+    success_url = reverse_lazy("pessoa:home")
+
+
+class ClienteLogoutView(LogoutView):
+    # Views para renderizar a tela inicial Cliente
+
     success_url = reverse_lazy("pessoa:login")
-
-        
-
-
 
