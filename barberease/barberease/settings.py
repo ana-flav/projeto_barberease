@@ -60,6 +60,23 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
+
+##################
+# AUTHENTICATION #
+##################
+
+AUTH_USER_MODEL = "auth.User"
+
+AUTHENTICATION_BACKENDS = ["django.contrib.auth.backends.ModelBackend"]
+
+LOGIN_URL = "pessoa:login"
+
+LOGIN_REDIRECT_URL = "/profile/"
+
+LOGOUT_REDIRECT_URL = "pessoa:login"
+
+
+
 ROOT_URLCONF = "barberease.urls"
 
 AUTHENTICATION_BACKENDS = [
