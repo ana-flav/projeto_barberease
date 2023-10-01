@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: db_barberease
+      POSTGRES_PASSWORD: romeulindo
+  web:
+    build: ./
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+    container_name: barberease
+    volumes:
+      - .:/barberease
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
