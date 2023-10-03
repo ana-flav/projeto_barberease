@@ -30,9 +30,3 @@ class ClienteHomeView(TemplateView):
     template_name = "cliente_home.html"
     success_url = reverse_lazy("pessoa:home")
 
-
-class ClienteLogoutView(LogoutView):
-    # Views para renderizar a tela inicial Cliente
-
-    success_url = reverse_lazy("pessoa:login")
-
