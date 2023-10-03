@@ -19,21 +19,21 @@
 
 {% get_providers as socialaccount_providers %}
 
-<
+
 
 			<form method="POST">
 				<div class="centro">
 					{% csrf_token %}
 
 					<div class="barb">BarberEase</div>
-					<p class="find">Encontre o melhor salão para você!</p>
+					<div class="find">Encontre o melhor salão para você!</div>
 					<p class="box-title">Faça seu login:</p>
 
 					<div class="form-input-container">
 						<div class="field-container">
 							<label class="label">E-mail:
 								<div class="form-control-container">
-									<input type="text" name="login" class="form-control" id="id_login" placeholder="E-mail">
+									<input type="text" name="login" class="form-control" id="id_login" placeholder="Digite seu e-mail">
 								</div>
 							</label>
 						</div>
@@ -41,14 +41,14 @@
 						<div class="field-container">
 							<label class="label">Senha:
 								<div class="form-control-container">
-								{% render_field form.password class="form-control" %}
+								{% render_field form.password class="form-control" placeholder="Digite sua senha"%}
 								</div>
 							</label>
 						</div>
 					</div>
 
 
-					<br>
+					<p></p>
 					{% get_providers as socialaccount_providers %}
 					<div class="form-button-container">
 						<div class="bottomgg" id="googleButton">
@@ -59,6 +59,15 @@
 
 						<input class="bottoment" type="submit" value="Entrar"/>
 					</div>
+					<div class="box-end">Cadastre-se como
+						<a href="{% provider_login_url 'google' %}" class="client-sigin">
+							cliente
+						</a>
+						ou como
+						<a href="{% provider_login_url 'google' %}" class="barb-sigin">
+							barbearia
+						</a>
+			        </div>
 				</div>   
 			</form>
 	</div>

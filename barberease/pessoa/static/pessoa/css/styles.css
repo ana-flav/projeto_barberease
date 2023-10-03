@@ -1,6 +1,11 @@
-@import url('https://fonts.google.com/specimen/Abhaya+Libre');
-@import url('https://fonts.google.com/specimen/Kanit?query=kanit');
-
+@font-face {
+    font-family: 'Abhaya Libre ExtraBold';
+    src: url(../fonts/AbhayaLibre-ExtraBold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Kanit';
+    src: url(../fonts/Kanit-Regular.ttf) format('truetype');
+}
 body {
     background-image: url(../images/login_back.png);
     background-position: center center;
@@ -26,11 +31,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-    padding: 30px;
+    padding: 20px;
     max-width: 310px;
     height: 395px;
     border-radius: 10px;
-    background: #FFF9EE;  
+    background: #FFFFFF;  
 }
 
 .centro .barb{
@@ -48,7 +53,7 @@ body {
     font-size: 50px;
     font-style: normal;
     font-weight: 900;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .find{
@@ -64,40 +69,41 @@ body {
     color: #000;
     text-align: center;
     font-family: Kanit;
-    font-size: 20px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 400;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .field-container{
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+    padding-left: 0px;
 }
 
 .form-input-container{
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 10px;
 }
 
 .form-control-container{
 	display: flex;
 	align-items: center;
-    max-width: 300px;
-    height: 30px;
+    max-width: 260px;
+    height: 35px;
 	padding-left: 10px;
 	margin-top: 5px;
-    background-color: white;
-	border: 1px solid #DDCEC2;
+    background-color: #DDCEC2;
     border-radius: 15px;
     cursor: pointer;
 }
 
 .form-control{
-    background-color: white;
+    background-color: transparent;
 	border: none;
+    padding-left: 15px;
 }
 
 .form-control:focus{
@@ -107,6 +113,7 @@ body {
 .label{
     color: #000;
     text-align: left;
+    margin-left: 10px;
     font-family: Kanit;
     font-size: 14px;
     font-style: normal;
@@ -119,13 +126,14 @@ body {
     background-size: 20px 20px;
     background-position: 12px center;
     background-repeat: no-repeat;
-    width: 310px;
-    height: 30px;
+    width: 260px;
+    height: 34px;
     background-color: #FFF9EE;
     border: 1px solid #7E5638;
     border-radius: 15px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-bottom: 25px;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.20));
     color: #402009;
     display: flex;
@@ -142,18 +150,22 @@ body {
 .bottomgg:hover{
     background-color: #cfe0fa; 
 }
-
+.google-login-button {
+    text-decoration: none; 
+    color: #402009;
+}
 .bottoment:hover{
 	background-color: #8f5429;
 	border: 3px solid #8f5429;
 }
 
 .bottoment{
-    width: 310px;
-    height: 32px;
+    width: 100px;
+    height: 35px;
     background-color: #402009;
     border: 3px solid #402009;
     border-radius: 15px;
+    margin-left: 86px;
     cursor: pointer;
     margin-bottom: 8px;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.20));
@@ -164,7 +176,7 @@ body {
     font-family: Kanit;
     font-size: 14px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 400;
 	color: white;
     line-height: normal;
 	transition: 200ms;
@@ -176,13 +188,28 @@ body {
 	justify-content: center;
 	
 }
+.client-sigin {
+    text-decoration: none; 
+    color: #402009;
+}
+.barb-sigin {
+    text-decoration: none; 
+    color: #402009;
+}
+.box-end {
+    color: #402009;
+    text-align: center;
+    font-family: Kanit;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
 @media (max-width: 480px) {
     button {
         width: 70%;
     }
 }
-.google-login-button {
-    text-decoration: none; 
-    color: #402009;
-}
+
 
